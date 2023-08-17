@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteRule . index.php
+
+<Limit GET POST PUT OPTIONS DELETE PATCH HEAD>
+  Require all granted
+</Limit>
+<LimitExcept GET POST PUT OPTIONS DELETE PATCH HEAD>
+  Require all denied
+</LimitExcept>
